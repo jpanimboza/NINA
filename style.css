@@ -1,73 +1,51 @@
 body {
-    display: flex;
-    flex-direction: column; /* Cambiamos a columna para el footer */
     margin: 0;
     font-family: sans-serif;
     background-color: #f8f8f8;
-    min-height: 100vh; /* Asegura que el body ocupe toda la altura */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-aside {
-    width: 200px; /* Ancho de la barra lateral */
-    background-color: #e8f5e9; /* Verde claro de fondo */
-    color: #333;
-    padding: 20px;
-    box-sizing: border-box; /* Incluimos el padding en el ancho */
-    height: 100vh; /* La barra lateral ocupa toda la altura de la pantalla */
+header {
+    background-color: #e8f5e9; /* Verde claro para la barra de navegación */
+    padding: 10px 20px;
+    border-bottom: 1px solid #a5d6a7;
 }
 
-aside h2 {
-    color: #4caf50; /* Verde más oscuro para el título */
-    margin-bottom: 20px;
-}
-
-aside ul {
+nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-aside li {
-    margin-bottom: 10px;
+nav li {
+    margin-right: 20px;
 }
 
-aside a {
+nav a {
     text-decoration: none;
     color: #333;
-    display: block;
     padding: 8px 12px;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
 
-aside a:hover {
+nav a:hover {
     background-color: #c8e6c9; /* Verde más claro al pasar el ratón */
 }
 
 main {
-    flex-grow: 1; /* El contenido principal ocupa el espacio restante */
+    flex-grow: 1;
     padding: 20px;
+    line-height: 1.6;
 }
 
-/* Estilos adicionales para evocar la naturaleza */
-body {
-    background-color: #f8f8f8; /* Fondo general más claro */
+main h1 {
+    color: #2e7d32; /* Título principal en verde oscuro */
 }
 
-aside {
-    border-right: 1px solid #a5d6a7; /* Borde sutil */
-}
-
-aside a {
-    border-left: 3px solid transparent; /* Borde izquierdo transparente */
-}
-
-aside a:hover {
-    border-left: 3px solid #4caf50; /* Borde izquierdo verde al pasar el ratón */
-}
-
-main {
-  line-height: 1.6;
-}
 footer {
     background-color: #f0f0f0;
     text-align: center;
