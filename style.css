@@ -1,0 +1,67 @@
+body {
+    display: flex; /* Usamos flexbox para la disposición */
+    margin: 0;
+    font-family: sans-serif;
+}
+
+aside {
+    width: 200px; /* Ancho de la barra lateral */
+    background-color: #e8f5e9; /* Verde claro de fondo */
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box; /* Incluimos el padding en el ancho */
+    height: 100vh; /* La barra lateral ocupa toda la altura de la pantalla */
+}
+
+aside h2 {
+    color: #4caf50; /* Verde más oscuro para el título */
+    margin-bottom: 20px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+aside a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+aside a:hover {
+    background-color: #c8e6c9; /* Verde más claro al pasar el ratón */
+}
+
+main {
+    flex-grow: 1; /* El contenido principal ocupa el espacio restante */
+    padding: 20px;
+}
+
+/* Estilos adicionales para evocar la naturaleza */
+body {
+    background-color: #f8f8f8; /* Fondo general más claro */
+}
+
+aside {
+    border-right: 1px solid #a5d6a7; /* Borde sutil */
+}
+
+aside a {
+    border-left: 3px solid transparent; /* Borde izquierdo transparente */
+}
+
+aside a:hover {
+    border-left: 3px solid #4caf50; /* Borde izquierdo verde al pasar el ratón */
+}
+
+main {
+  line-height: 1.6;
+}
