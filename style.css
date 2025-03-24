@@ -8,19 +8,27 @@ body {
 }
 
 header {
-    background-color: #e8f5e9; /* Verde claro para la barra de navegación */
+    background-color: #f6e691;
     padding: 10px 20px;
     border-bottom: 1px solid #a5d6a7;
+    color: #da5f2b
 }
+
+.logo {
+    max-width: 100px;
+  }
 
 nav ul {
-    width: 90%;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    overflow: hidden;
+    background-color: #224F2C
 }
-
+nav ul li a {
+  float: left;
+  display: block;
+  color: #F5F5DC;
+  
+}
 nav li {
     margin-right: 20px;
 }
@@ -33,8 +41,13 @@ nav a {
     transition: background-color 0.3s;
 }
 
+nav {
+    width: 90%;
+    margin: 20px auto;
+}
+
 nav a:hover {
-    background-color: #c8e6c9; /* Verde más claro al pasar el ratón */
+    background-color: #da5f2b; /* Verde más claro al pasar el ratón */
 }
 
 main {
