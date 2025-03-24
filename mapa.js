@@ -17,9 +17,8 @@ fetch(geojsonUrl)
                 layer.on('click', function(e) {
                     // Obtener la propiedad que deseas mostrar
                     var texto = feature.properties.zone; // Reemplaza 'zone' con la propiedad que deseas mostrar
-
-                    // Mostrar el texto en un elemento HTML (puedes personalizar esto)
-                    document.getElementById('texto-desplegado').textContent = 'texto_j';
+                    // Crear y abrir un popup con el texto
+                    layer.bindPopup(texto).openPopup();
                 });
             }
         }).addTo(map);
