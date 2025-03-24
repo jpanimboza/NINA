@@ -1,6 +1,7 @@
 var map = L.map('map').setView([0.18,-80],6);
 var osmLayer = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution: 'Jonathan'}).addTo(map);
 map.addLayer(osmLayer);
+/*
 $.getJSON("https://jpanimboza.github.io/NINA/area.geojson",
 function(data){
     L.geoJSON(data, {
@@ -20,4 +21,4 @@ function(data){
             };
         }
     }).addTo(map);
-});
+});*/
