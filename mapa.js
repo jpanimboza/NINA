@@ -12,21 +12,8 @@ fetch(geojsonUrl)
     .then(data => {
         // Agregar la capa GeoJSON al mapa
         L.geoJSON(data, {
-            style: function(feature) {
-                // Estilo para los polígonos (puedes personalizarlo)
-                return {
-                    fillColor: 'yellow',
-                    color: 'red',
-                    weight: 2,
-                    opacity: 1,
-                    fillOpacity: 0.5
-                };
-            },
             onEachFeature: function(feature, layer) {
-                // Agregar ventanas emergentes (popups) si las propiedades existen
-                if (feature.properties && feature.properties.zone) { // Usamos 'zone' en lugar de 'nombre'
-                    layer.bindPopup(feature.properties.zone);
-                }
+                // Agregar un evento de clic a cada característica
                 layer.on('click', function(e) {
                     // Obtener la propiedad que deseas mostrar
                     var texto = feature.properties.zone; // Reemplaza 'zone' con la propiedad que deseas mostrar
