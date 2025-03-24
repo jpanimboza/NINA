@@ -27,6 +27,13 @@ fetch(geojsonUrl)
                 if (feature.properties && feature.properties.zone) { // Usamos 'zone' en lugar de 'nombre'
                     layer.bindPopup(feature.properties.zone);
                 }
+                layer.on('click', function(e) {
+                    // Obtener la propiedad que deseas mostrar
+                    var texto = feature.properties.zone; // Reemplaza 'zone' con la propiedad que deseas mostrar
+
+                    // Mostrar el texto en un elemento HTML (puedes personalizar esto)
+                    document.getElementById('texto-desplegado').textContent = texto;
+                })
             }
         }).addTo(map);
     })
