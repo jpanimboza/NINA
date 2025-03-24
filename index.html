@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con Menú Horizontal Verde</title>
+    <title>NINA Observatorio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
 
@@ -12,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Mapa</a></li>
+                <li><a href="#">Metodología</a></li>
                 <li><a href="#">Herramientas</a></li>
                 <li><a href="#">Equipo</a></li>
                 <li><a href="#">Contacto</a></li>
@@ -21,13 +23,15 @@
     </header>
 
     <main>
-        <h1>Bienvenido a mi sitio web</h1>
-        <p>Este es el contenido principal de la página. Puedes agregar aquí información, mapas, herramientas y detalles sobre nuestro equipo.</p>
+        <h1>NINA: Observatorio de Incendios Forestales del Ecuador aborigen y moderno</h1>
+        <h1>Mapa</h1>
+        <div id="map" style="height: 400px; width: 100%;"></div>
     </main>
 
     <footer>
-        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p>© 2025 Jonathan Panimboza. Todos los derechos reservados.</p>
     </footer>
 
+    <script src="mapa.js"></script>
 </body>
 </html>
