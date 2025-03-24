@@ -19,7 +19,7 @@ fetch(geojsonUrl)
                     var texto = feature.properties.zone; // Reemplaza 'zone' con la propiedad que deseas mostrar
 
                     // Mostrar el texto en un elemento HTML (puedes personalizar esto)
-                    document.getElementById('texto-desplegado').textContent = texto;
+                    document.getElementById('texto-desplegado').textContent = 'texto_j';
                 });
             }
         }).addTo(map);
