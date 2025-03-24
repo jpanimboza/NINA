@@ -19,5 +19,5 @@ function(data){
                 fillOpacity: 0.5
             };
         }
-    }).addTo(mapa);
+    }).addTo(map);
 });
