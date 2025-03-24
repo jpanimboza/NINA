@@ -65,3 +65,8 @@ aside a:hover {
 main {
   line-height: 1.6;
 }
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+}
