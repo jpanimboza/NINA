@@ -1,24 +1,35 @@
-var map = L.map('map').setView([0.18,-80],6);
-var osmLayer = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution: 'Jonathan'}).addTo(map);
-map.addLayer(osmLayer);
-/*
-$.getJSON("https://jpanimboza.github.io/NINA/area.geojson",
-function(data){
-    L.geoJSON(data, {
-        onEachFeature: function(feature, layer) {
-            if (feature.properties && feature.properties.zone) {
-                layer.bindPopup(feature.properties.zone);
+var map = L.map('map').setView([-1,-80],6);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// URL del archivo GeoJSON externo
+var geojsonUrl = 'https://jpanimboza.github.io/NINA/area.geojson'; // Reemplaza con la URL de tu archivo
+
+// Cargar el archivo GeoJSON
+fetch(geojsonUrl)
+    .then(response => response.json())
+    .then(data => {
+        // Agregar la capa GeoJSON al mapa
+        L.geoJSON(data, {
+            style: function(feature) {
+                // Estilo para los polígonos (puedes personalizarlo)
+                return {
+                    fillColor: 'yellow',
+                    color: 'red',
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.5
+                };
+            },
+            onEachFeature: function(feature, layer) {
+                // Agregar ventanas emergentes (popups) si las propiedades existen
+                if (feature.properties && feature.properties.zone) { // Usamos 'zone' en lugar de 'nombre'
+                    layer.bindPopup(feature.properties.zone);
+                }
             }
-        },
-        style: function(feature) {
-            // Puedes personalizar el estilo de los polígonos aquí
-            return {
-                fillColor: 'yellow', // Color de relleno
-                color: 'red', // Color del borde
-                weight: 2, // Ancho del borde
-                opacity: 1,
-                fillOpacity: 0.5
-            };
-        }
-    }).addTo(map);
-});*/
+        }).addTo(map);
+    })
+    .catch(error => {
+        console.error('Error al cargar el GeoJSON:', error);
+    });
