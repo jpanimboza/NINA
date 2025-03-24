@@ -19,6 +19,10 @@ header {
     max-width: 100px;
   }
 
+.logo_f {
+    max-height: 100px;
+  }
+
 nav ul {
     list-style: none;
     overflow: hidden;
