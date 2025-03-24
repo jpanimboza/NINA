@@ -33,7 +33,7 @@ fetch(geojsonUrl)
 
                     // Mostrar el texto en un elemento HTML (puedes personalizar esto)
                     document.getElementById('texto-desplegado').textContent = texto;
-                })
+                });
             }
         }).addTo(map);
     })
