@@ -1,7 +1,10 @@
 body {
-    display: flex; /* Usamos flexbox para la disposición */
+    display: flex;
+    flex-direction: column; /* Cambiamos a columna para el footer */
     margin: 0;
     font-family: sans-serif;
+    background-color: #f8f8f8;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura */
 }
 
 aside {
