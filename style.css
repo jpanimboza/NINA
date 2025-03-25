@@ -15,10 +15,6 @@ header {
     position: relative
 }
 
-header th {
-    text-align : "left";
-}
-
 .logo {
     max-width: 100px;
     height: 100px;
@@ -26,7 +22,7 @@ header th {
 
 .logo_f {
     height: 100px;
-    max-width: 300px;
+    max-width: 400px;
   }
 
 nav ul {
