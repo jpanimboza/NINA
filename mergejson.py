@@ -3,7 +3,7 @@ import glob
 
 result = []
 for f in glob.glob("/Incendios/*.json"):
-    with open(f, "rb") as infile:
+    with open(f, "r") as infile:
         result.append(json.load(infile))
 
 with open("merged_file.json", "wb") as outfile:
