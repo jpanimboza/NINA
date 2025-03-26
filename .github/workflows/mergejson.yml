@@ -23,4 +23,4 @@ jobs:
       - name: Set up Python
         run: python -m pip install --upgrade pip setuptools wheel
       - name: install glob
-        run: python -m import glob
+        run: python -c "import glob"
