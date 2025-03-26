@@ -7,6 +7,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions: 
+      write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -18,3 +21,4 @@ jobs:
       
       - name: Run Python script
         run: python mergejson.py
+      - uses: stefanzweifel/git-auto-commit-action@v5
