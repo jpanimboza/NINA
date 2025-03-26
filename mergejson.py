@@ -3,7 +3,7 @@ import geojson
 import glob
 collection = []
 for f in glob.glob("Incendios/*.geojson"):
-    with open(f) as infile:
+    with open(f, "r") as infile:
         layer = geojson.load(f)
         collection.append(layer)
 geo_collection = geojson.GeometryCollection(collection)
