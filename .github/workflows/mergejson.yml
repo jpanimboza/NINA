@@ -25,7 +25,7 @@ jobs:
       - name: try glob
         run: python -c "import glob; print(glob.glob('Incendios/*.geojson'))"
       - name: print json
-        run: python -C "import json; print("json") "
+        run: python -c "import json; print("json") "
       - name: merge geojson
         run: |
           result = [] 
