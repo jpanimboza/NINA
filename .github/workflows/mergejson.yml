@@ -20,11 +20,7 @@ jobs:
       # You can test your matrix by printing the current Python version
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+      - name: Set up Python
+        run: python -m pip install --upgrade pip setuptools wheel
       - name: install glob
-        run: |
-          python import sys
-          python pip install glob
-          python import glob
-      - name: import glob
-        run:
-          python -c "import sys; print(glob.glob("imgPage/"))"
+        run: python -c "import glob; print("hola")"
