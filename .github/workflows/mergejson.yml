@@ -30,6 +30,6 @@ jobs:
         run: |
           result = [] 
           for f in glob.glob('Incendios/*.geojson): 
-            with open(f," rb") as infile:
+            with open(f,"rb") as infile:
               result.append(json.load(infile))
-              print(result)"
+              print(result)
