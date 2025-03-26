@@ -22,5 +22,6 @@ jobs:
         run: python -c "import sys; print(sys.version)"
       - name: import glob
         run: |
+          pip install glob
           import glob
           print(glob.glob("imgPage/"))
