@@ -1,11 +1,11 @@
-import json
+import os
+import geojson
 import glob
-result = []
+collection = []
 for f in glob.glob("Incendios/*.geojson"):
-    with open(f, "r") as infile:
-        result.append(json.load(infile))
+    with open(file) as infile:
+        layer = geojson.load(f)
+        collection.append(layer)
+geo_collection = geojson.GeometryCollection(collection)
 with open("Incendios_f/merged_file.geojson", "w", encoding="utf8") as outfile:
-    json.dump(result, outfile)
-for f in glob.glob("Incendios_f/*.geojson"):
-    with open(f, "r") as infile:
-        print(f)
+    geojson.dump(geo_collection, outfile)
