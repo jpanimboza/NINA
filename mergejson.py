@@ -1,3 +1,4 @@
+pip install geojson
 import os
 import geojson
 import glob
