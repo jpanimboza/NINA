@@ -22,7 +22,9 @@ jobs:
         run: python -c "import sys; print(sys.version)"
       - name: install glob
         run: |
+          import sys
           pip install glob
+          import glob
       - name: import glob
         run:
           python -c "import sys; print(glob.glob("imgPage/"))"
