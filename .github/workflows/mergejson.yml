@@ -27,9 +27,11 @@ jobs:
       - name: print json
         run: python -c "import json; print('Hola Mundo')"
       - name: merge geojson
-        run: |
-          result = [] 
-          for f in glob.glob('Incendios/*.geojson'): 
-            with open(f,"rb") as infile:
-              result.append(json.load(infile))
-              print(result)
+        uses: actions/setup-python@v5
+        with:
+          script: |
+            result = [] 
+            for f in glob.glob('Incendios/*.geojson'): 
+              with open(f,"rb") as infile:
+                result.append(json.load(infile))
+                print(result)
