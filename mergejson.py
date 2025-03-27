@@ -1,6 +1,8 @@
 import os
 import geojson
 import glob
+import sys
+import json
 collection = []
 for f in glob.glob("Incendios/*.geojson"):
     with open(f, "rb") as infile:
