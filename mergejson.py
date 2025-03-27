@@ -8,7 +8,6 @@ for f in glob.glob("Incendios/*.geojson"):
     with open(f, "rb") as infile:
         layer = geojson.load(infile)
         feature_i = layer['features']
-        print(Feature(feature_i).get("type"))
         collection.append(feature_i)
 geo_collection = geojson.FeatureCollection(collection)
 print(geo_collection)
