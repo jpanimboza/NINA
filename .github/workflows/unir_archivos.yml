@@ -1,5 +1,5 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: GitHub Actions para unir archivos geojson
+run-name: ${{ github.actor }} ha subido un nuevo elemento a Incendios
 on:
   push:
     paths: 
