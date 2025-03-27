@@ -11,5 +11,5 @@ for f in glob.glob("Incendios/*.geojson"):
         collection.append(feature_i)
 geo_collection = geojson.FeatureCollection(collection)
 print(geo_collection)
-with open("Incendios_f/merged_file.geojson", "w", encoding="utf8") as outfile:
+with open("Incendios_f/Incendios_Ecuador.geojson", "w", encoding="utf8") as outfile:
     geojson.dump(geo_collection, outfile)
