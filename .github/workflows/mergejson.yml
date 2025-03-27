@@ -1,9 +1,9 @@
-name: Python package
+name: Actualizar geojson
 
 on: 
   push:
     paths: 
-      - 'Incendios/**.geojson'
+      - 'Incendios/**'
 
 jobs:
   build:
