@@ -12,4 +12,4 @@ for f in glob.glob("Incendios/*.geojson"):
 geo_collection = geojson.FeatureCollection(collection)
 print(geo_collection)
 with open("Incendios_f/merged_file.geojson", "w", encoding="utf8") as outfile:
-    geojson.dump(geo_collection, outfile, indent=4)
+    geojson.dump(geo_collection, outfile)
